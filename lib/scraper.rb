@@ -12,7 +12,7 @@ class Scraper
       hashed_st = {
         :name => student.css("a div.card-text-container h4.student-name").text,
         :location => student.css("a div.card-text-container p.student-location").text,
-        :profile_url => student.css("a").attributes("href").value
+        :profile_url => student.css("a").attribute("href").value
       }
       students << hashed_st
     end
