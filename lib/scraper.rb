@@ -25,9 +25,10 @@ class Scraper
     attributes = []
     student_hash = {}
     page.css("a").each do |link|
-      name = link.attribute("href").value.split(".")[1].split(".")[0]
-      val = link.attribute("href").value
-      student_hash["#{name}".to_sym] = val
+      
+      # name = link.attribute("href").value.split(".")[1].split(".")[0]
+      # val = link.attribute("href").value
+      # student_hash["#{name}".to_sym] = val
     end
 
   end
