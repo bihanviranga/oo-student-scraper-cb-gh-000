@@ -14,14 +14,14 @@ class Scraper
         :location => student.css("a div.card-text-container p.student-location").text
         :profile_url => student.css("a").attributes("href").value
       }
-      students << hashed_st 
-      
-    end 
+      students << hashed_st
+    end
+
+    students 
   end
 
   def self.scrape_profile_page(profile_url)
-    
+
   end
 
 end
-
