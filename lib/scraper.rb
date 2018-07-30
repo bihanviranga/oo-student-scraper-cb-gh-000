@@ -23,6 +23,8 @@ class Scraper
     doc = File.read(profile_url)
     page = Nokogiri::HTML(doc)
     attributes = []
+
+    
   end
 
 end
