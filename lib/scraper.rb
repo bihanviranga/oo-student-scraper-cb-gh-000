@@ -26,6 +26,7 @@ class Scraper
 
     page.css("a").each do |link|
       name = link.attribute("href").value.split(".")[1].split(".")[0]
+      val = link.attribute("href").value
     end
 
   end
