@@ -24,7 +24,10 @@ class Scraper
     page = Nokogiri::HTML(doc)
     attributes = []
 
-    
+    page.css("a").each do |link|
+      name = link.attribute("href").value.split(".")[1].split(".")[0]
+    end
+
   end
 
 end
