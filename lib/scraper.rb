@@ -10,14 +10,13 @@ class Scraper
 
     page.css("div.student-card").each do |student|
       hashed_st = {
-        :name => student.css("a div.card-text-container h4.student-name").text
-        :location => student.css("a div.card-text-container p.student-location").text
+        :name => student.css("a div.card-text-container h4.student-name").text,
+        :location => student.css("a div.card-text-container p.student-location").text,
         :profile_url => student.css("a").attributes("href").value
       }
       students << hashed_st
     end
-
-    students 
+    students
   end
 
   def self.scrape_profile_page(profile_url)
